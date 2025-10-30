@@ -443,7 +443,7 @@ function initializeEnhancedFormHandling() {
 
         let formData = new FormData(form);
 
-        fetch("https://formspree.io/f/mqapbbrw", {
+        fetch("https://formspree.io/f/xqayonwa", {
             method: "POST",
             body: formData,
             headers: { "Accept": "application/json" }
@@ -648,4 +648,5 @@ additionalStyles.textContent = `
         100% { transform: translateX(100%); }
     }
 `;
+
 document.head.appendChild(additionalStyles);
