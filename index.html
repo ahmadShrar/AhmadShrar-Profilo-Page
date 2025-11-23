@@ -617,11 +617,51 @@ document.querySelector('.contact-form').addEventListener('submit', function(e) {
   });
 });
 </script>
+<script>
+    document.onkeydown = function(e) {
+    if (e.keyCode == 123) { // F12
+        return false;
+    }
+    if (e.ctrlKey && e.shiftKey && (e.keyCode == 73 || e.keyCode == 74)) {
+        return false; // Ctrl+Shift+I / Ctrl+Shift+J
+    }
+    if (e.ctrlKey && e.keyCode == 85) {
+        return false; // Ctrl+U (عرض السورس)
+    }
+};
+document.addEventListener('contextmenu', function(e) {
+    e.preventDefault();
+});
+// منع النسخ
+document.addEventListener('copy', (e) => {
+    e.preventDefault();
+});
 
+// منع القص
+document.addEventListener('cut', (e) => {
+    e.preventDefault();
+});
+
+// منع التحديد
+document.addEventListener('selectstart', (e) => {
+    e.preventDefault();
+});
+
+// منع سحب النص
+document.addEventListener('dragstart', (e) => {
+    e.preventDefault();
+});
+
+// منع النقر اليمين
+document.addEventListener('contextmenu', (e) => {
+    e.preventDefault();
+});
+</script>
 </body>
 
 
 </html>
+
 
 
 
